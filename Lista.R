@@ -4,6 +4,8 @@
 library(faraway)
 library(performance)
 library(statmod)
+library(hnp)
+library(MASS)
 
 ?faraway::wbca
 
@@ -40,3 +42,5 @@ ajustados <- predict(ajuste)
 par(las=0, mar=c(5, 4, 4, 2))
 plot(residuos ~ ajustados, col = 'blue', xlab = 'Valores Ajustados', ylab='Resíduos')
 
+par(las = 1, mar = c(5, 4, 4, 2), cex = 1.4)
+hnp(ajuste)
